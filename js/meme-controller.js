@@ -5,11 +5,11 @@
 // b. Done --> Design an initial home page (index.html, main.js, CSS files)
 // c. Done --> Commit and Push
 // d. Done --> Create gMeme as described above with a single txt line.
-// e. Todo --> Create a Canvas with a single image – the image shall be taken from gMeme
+// e. Done --> Create a Canvas with a single image – the image shall be taken from gMeme
 //             (managed by a memeService)
-// f. Todo --> Draw a text line on it with IMPACT font at the top of the image.
+// f. Done --> Draw a text line on it with IMPACT font at the top of the image.
 //             The text shall be taken from gMeme
-// g. Todo --> Add text input to the HTML and dynamically take the text line value from the input to gMeme
+// g. Done --> Add text input to the HTML and dynamically take the text line value from the input to gMeme
 //             and from it to the Canvas
 // h. Todo --> Make a simple image-gallery with 2 images.
 //             Click an image to update gMeme and present it onto the Canvas.
@@ -20,5 +20,5 @@
 function onInit() {
     gElCanvas = document.getElementById('my-canvas');
     gCtx = gElCanvas.getContext('2d');
-    drawImg();
+    drawImg(0);
 }

@@ -9,13 +9,22 @@
     </head>
     <body onload="onInit()">
         <div class="canvas-container">
-            <input type="text" class="text" placeholder="Type here...">
+            <input
+                type="text"
+                id="myInput"
+                oninput="realTimeTextDraw()"
+                placeholder="Type here..."
+            />
             <canvas
                 id="my-canvas"
-                height="200"
-                width="200"
+                height="300"
+                width="300"
                 onclick="draw(event)"
             ></canvas>
+            <div class="my-galery flex">
+                <img src="img/1.jpg" onclick="myPicChoise(1)" />
+                <img src="img/2.jpg" onclick="myPicChoise(2)"/>
+            </div>
         </div>
         <script src="js/meme-service.js"></script>
         <script src="js/meme-controller.js"></script>
