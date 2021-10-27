@@ -11,10 +11,10 @@
 //             The text shall be taken from gMeme
 // g. Done --> Add text input to the HTML and dynamically take the text line value from the input to gMeme
 //             and from it to the Canvas
-// h. Todo --> Make a simple image-gallery with 2 images.
+// h. Done --> Make a simple image-gallery with 2 images.
 //             Click an image to update gMeme and present it onto the Canvas.
 //             Note that to start with – locate the Editor above the Image-Gallery.
-// i. Todo --> Make sure you can access your project in gitPages
+// i. Done --> Make sure you can access your project in gitPages
 
 
 function onInit() {

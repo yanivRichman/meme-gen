@@ -8,7 +8,7 @@ var gImgs = [
 var gMeme = {
     selectedImgId: 1,
     selectedLineIdx: 0,
-    lines: [{ txt: 'Toy Story', size: 20, align: 'left', color: 'white' }],
+    lines: [{ txt: 'Toy Story', size: 30, align: 'left', color: 'white' }],
 };
 
 var gElCanvas;
@@ -31,10 +31,12 @@ function realTimeTextDraw() {
 }
 
 function drawText(text, x, y) {
+    var currTextSize = gMeme.lines[0].size;
+    console.log(currTextSize);
     gCtx.lineWidth = 2;
     gCtx.strokeStyle = 'black';
     gCtx.fillStyle = 'white';
-    gCtx.font = '30px impact';
+    gCtx.font = currTextSize + 'px impact';
     gCtx.fillText(text, x, y);
     gCtx.strokeText(text, x, y);
     gCtx;
@@ -48,6 +50,5 @@ function myPicChoise(idx) {
         gMeme.selectedImgId=2;
     }
     currImgId=gMeme.selectedImgId;
-    // console.log(gMeme.selectedImgId);
     drawImg(currImgId-1);
 }
