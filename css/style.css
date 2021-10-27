@@ -1,3 +1,13 @@
-.home-page {
-    background-color: aqua;
+.canvas-container{
+    background-color: #383B42;
+    margin: 0 auto;
+    width: 90vw;
+    height: 90vh;
+}
+
+canvas{
+    display: block;
+    margin: 0 auto;
+    /* outline: 1px solid black; */
+    background-color: white;
 }
