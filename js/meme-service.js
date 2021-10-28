@@ -13,6 +13,8 @@ var gMeme = {
 
 var gElCanvas;
 var gCtx;
+var gCurrText;
+var gCurrImgId;
 
 function drawImg(idx) {
     var img = new Image();
@@ -20,19 +22,28 @@ function drawImg(idx) {
     img.src = currImg;
     img.onload = () => {
         gCtx.drawImage(img, 0, 0, gElCanvas.width, gElCanvas.height);
-        realTimeTextDraw();
+        renderTxt();
     };
 }
 
-function realTimeTextDraw() {
+function renderTxt() {
+    var elTxt = document.getElementById('myInput').value;
+    drawText(elTxt, 50, 50);
+}
+
+function onInputText(text) {
+    gCurrText = text;
+    gMeme.lines[0].txt = text;
+    drawImg(0);
+}
+
+function realTimeTextDraw(text) {
     var elTxt = document.getElementById('myInput').value;
     gMeme.lines[0].txt = elTxt;
-    drawText(elTxt, 50, 50);
 }
 
 function drawText(text, x, y) {
     var currTextSize = gMeme.lines[0].size;
-    console.log(currTextSize);
     gCtx.lineWidth = 2;
     gCtx.strokeStyle = 'black';
     gCtx.fillStyle = 'white';
@@ -45,10 +56,10 @@ function drawText(text, x, y) {
 function myPicChoise(idx) {
     var currImgId;
     if (idx === 1) {
-        gMeme.selectedImgId=1;
-    } else if (idx ===2) {
-        gMeme.selectedImgId=2;
+        gMeme.selectedImgId = 1;
+    } else if (idx === 2) {
+        gMeme.selectedImgId = 2;
     }
-    currImgId=gMeme.selectedImgId;
-    drawImg(currImgId-1);
+    currImgId = gMeme.selectedImgId;
+    drawImg(currImgId - 1);
 }

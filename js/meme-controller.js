@@ -16,9 +16,20 @@
 //             Note that to start with – locate the Editor above the Image-Gallery.
 // i. Done --> Make sure you can access your project in gitPages
 
+// 2. Phase2 – Basic line operations:
+// a. Todo --> Add the button “increase/decrease” font
+//             Implement text size increase / decrease
+// b. Todo --> Add “up/down” button
+//             Implement moving lines up/down
+
+// 3. Phase3 – switch between two lines:
+// a. Todo --> Add the button “switch line”
+// b. Todo --> Add (to gMeme) a second line and implement switching between the lines (focus) using the button
+
 
 function onInit() {
     gElCanvas = document.getElementById('my-canvas');
     gCtx = gElCanvas.getContext('2d');
     drawImg(0);
 }
+

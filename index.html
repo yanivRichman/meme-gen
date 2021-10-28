@@ -12,18 +12,24 @@
             <input
                 type="text"
                 id="myInput"
-                oninput="realTimeTextDraw()"
+                oninput="onInputText(value)"
                 placeholder="Type here..."
             />
+            <button class="increase-font" onclick="increaseFontSize()">
+                A&#5161;
+            </button>
+            <button class="decrease-font" onclick="decreaseFontSize()">
+                A&#8315;
+            </button>
+
             <canvas
                 id="my-canvas"
                 height="300"
                 width="300"
-                onclick="draw(event)"
             ></canvas>
             <div class="my-galery flex">
                 <img src="img/1.jpg" onclick="myPicChoise(1)" />
-                <img src="img/2.jpg" onclick="myPicChoise(2)"/>
+                <img src="img/2.jpg" onclick="myPicChoise(2)" />
             </div>
         </div>
         <script src="js/meme-service.js"></script>
