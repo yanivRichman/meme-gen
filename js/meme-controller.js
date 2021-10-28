@@ -17,9 +17,9 @@
 // i. Done --> Make sure you can access your project in gitPages
 
 // 2. Phase2 – Basic line operations:
-// a. Todo --> Add the button “increase/decrease” font
+// a. Done --> Add the button “increase/decrease” font
 //             Implement text size increase / decrease
-// b. Todo --> Add “up/down” button
+// b. Done --> Add “up/down” button
 //             Implement moving lines up/down
 
 // 3. Phase3 – switch between two lines:
@@ -52,6 +52,10 @@ function onUpFontPosition() {
 
 function onDownFontPosition() {
     fontPositionDown();
+}
+
+function onSwitchLine() {
+    switchLine();
 }
 
 function myPicChoise(idx) {

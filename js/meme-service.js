@@ -62,3 +62,7 @@ function fontPositionDown() {
     gCurrTextHeight++;
     drawSelectedImg();
 }
+
+function switchLine() {
+    console.log('Here');
+}
