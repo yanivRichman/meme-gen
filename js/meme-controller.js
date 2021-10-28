@@ -26,10 +26,39 @@
 // a. Todo --> Add the button “switch line”
 // b. Todo --> Add (to gMeme) a second line and implement switching between the lines (focus) using the button
 
-
 function onInit() {
     gElCanvas = document.getElementById('my-canvas');
     gCtx = gElCanvas.getContext('2d');
     drawImg(0);
+}
+
+function onInputText(text) {
+    gCurrText = text;
+    gMeme.lines[0].txt = text;
+    drawSelectedImg();
+}
+
+function onIncreaseFontSize() {
+    increaseFontSize();
+}
+
+function onDecreaseFontSize() {
+    decreaseFontSize();
+}
+
+function myPicChoise(idx) {
+    var currImgId;
+    if (idx === 1) {
+        gMeme.selectedImgId = 1;
+    } else if (idx === 2) {
+        gMeme.selectedImgId = 2;
+    }
+    currImgId = gMeme.selectedImgId;
+    drawImg(currImgId - 1);
+}
+
+function renderTxt() {
+    var elTxt = document.getElementById('myInput').value;
+    drawText(elTxt, 50, 50);
 }
 

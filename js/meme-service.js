@@ -26,23 +26,6 @@ function drawImg(idx) {
     };
 }
 
-function renderTxt() {
-    var elTxt = document.getElementById('myInput').value;
-    drawText(elTxt, 50, 50);
-}
-
-function onInputText(text) {
-    gCurrText = text;
-    gMeme.lines[0].txt = text;
-    gCurrImgId=gMeme.selectedImgId-1
-    drawImg(gCurrImgId);
-}
-
-function realTimeTextDraw(text) {
-    var elTxt = document.getElementById('myInput').value;
-    gMeme.lines[0].txt = elTxt;
-}
-
 function drawText(text, x, y) {
     var currTextSize = gMeme.lines[0].size;
     gCtx.lineWidth = 2;
@@ -54,13 +37,17 @@ function drawText(text, x, y) {
     gCtx;
 }
 
-function myPicChoise(idx) {
-    var currImgId;
-    if (idx === 1) {
-        gMeme.selectedImgId = 1;
-    } else if (idx === 2) {
-        gMeme.selectedImgId = 2;
-    }
-    currImgId = gMeme.selectedImgId;
-    drawImg(currImgId - 1);
+function increaseFontSize() {
+    gMeme.lines[0].size++;
+    drawSelectedImg();
+}
+
+function decreaseFontSize() {
+    gMeme.lines[0].size--;
+    drawSelectedImg();
+}
+
+function drawSelectedImg() {
+    gCurrImgId = gMeme.selectedImgId - 1;
+    drawImg(gCurrImgId);
 }
