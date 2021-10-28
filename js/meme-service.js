@@ -15,6 +15,7 @@ var gElCanvas;
 var gCtx;
 var gCurrText;
 var gCurrImgId;
+var gCurrTextHeight = 50;
 
 function drawImg(idx) {
     var img = new Image();
@@ -27,7 +28,9 @@ function drawImg(idx) {
 }
 
 function drawText(text, x, y) {
+    console.log(y);
     var currTextSize = gMeme.lines[0].size;
+    gCurrTextHeight = y;
     gCtx.lineWidth = 2;
     gCtx.strokeStyle = 'black';
     gCtx.fillStyle = 'white';
@@ -35,6 +38,10 @@ function drawText(text, x, y) {
     gCtx.fillText(text, x, y);
     gCtx.strokeText(text, x, y);
     gCtx;
+}
+function drawSelectedImg() {
+    gCurrImgId = gMeme.selectedImgId - 1;
+    drawImg(gCurrImgId);
 }
 
 function increaseFontSize() {
@@ -47,7 +54,14 @@ function decreaseFontSize() {
     drawSelectedImg();
 }
 
-function drawSelectedImg() {
-    gCurrImgId = gMeme.selectedImgId - 1;
-    drawImg(gCurrImgId);
+function fontPositionUp() {
+    gCurrTextHeight--;
+    console.log(gCurrTextHeight);
+    drawSelectedImg();
+}
+
+function fontPositionDown() {
+    gCurrTextHeight++;
+    console.log(gCurrTextHeight);
+    drawSelectedImg();
 }

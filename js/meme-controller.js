@@ -46,6 +46,14 @@ function onDecreaseFontSize() {
     decreaseFontSize();
 }
 
+function onUpFontPosition() {
+    fontPositionUp();
+}
+
+function onDownFontPosition() {
+    fontPositionDown();
+}
+
 function myPicChoise(idx) {
     var currImgId;
     if (idx === 1) {
@@ -59,6 +67,6 @@ function myPicChoise(idx) {
 
 function renderTxt() {
     var elTxt = document.getElementById('myInput').value;
-    drawText(elTxt, 50, 50);
+    drawText(elTxt, 60, gCurrTextHeight);
 }
 
