@@ -23,7 +23,7 @@
 //             Implement moving lines up/down
 
 // 3. Phase3 – switch between two lines:
-// a. Todo --> Add the button “switch line”
+// a. Done --> Add the button “switch line”
 // b. Todo --> Add (to gMeme) a second line and implement switching between the lines (focus) using the button
 
 function onInit() {
@@ -34,7 +34,7 @@ function onInit() {
 
 function onInputText(text) {
     gCurrText = text;
-    gMeme.lines[0].txt = text;
+    gMeme.lines[gCurrLine].txt = text;
     drawSelectedImg();
 }
 
@@ -55,7 +55,8 @@ function onDownFontPosition() {
 }
 
 function onSwitchLine() {
-    switchLine();
+    console.log('development')
+    // switchLine();
 }
 
 function myPicChoise(idx) {
@@ -70,7 +71,13 @@ function myPicChoise(idx) {
 }
 
 function renderTxt() {
-    var elTxt = document.getElementById('myInput').value;
-    drawText(elTxt, 60, gCurrTextHeight);
+    var elUpTxt = document.getElementById('myInput');
+    var upTxt=elUpTxt.value;
+    var elDownTxt = document.getElementById('myInput');
+    var downTxt=elDownTxt.value;
+    if (gCurrLine === 0) {
+        drawText(upTxt, 60, gCurrUpTextHeight);
+    } else if (gCurrLine === 1) {
+        drawText(downTxt, 60, gCurrDownTextHeight);
+    }
 }
-

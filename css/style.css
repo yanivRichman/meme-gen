@@ -28,7 +28,16 @@ canvas {
 }
 
 
+
 /* HELPERS */
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.cursor-notAllowed {
+    cursor: not-allowed;
+}
 
 /* flex */
 

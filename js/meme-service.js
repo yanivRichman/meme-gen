@@ -8,16 +8,22 @@ var gImgs = [
 var gMeme = {
     selectedImgId: 1,
     selectedLineIdx: 0,
-    lines: [{ txt: 'Toy Story', size: 30, align: 'left', color: 'white' }],
+    lines: [
+        { txt: '', size: 30, align: 'left', color: 'white' },
+        { txt: '', size: 30, align: 'left', color: 'white' },
+    ],
 };
 
 var gElCanvas;
 var gCtx;
 var gCurrText;
 var gCurrImgId;
-var gCurrTextHeight = 50;
+var gCurrUpTextHeight = 50;
+var gCurrDownTextHeight = 250;
+var gCurrLine = 0;
 
 function drawImg(idx) {
+    console.log(gMeme);
     var img = new Image();
     var currImg = gImgs[idx].url;
     img.src = currImg;
@@ -28,8 +34,8 @@ function drawImg(idx) {
 }
 
 function drawText(text, x, y) {
-    var currTextSize = gMeme.lines[0].size;
-    gCurrTextHeight = y;
+    var currTextSize = gMeme.lines[gCurrLine].size;
+    gCurrUpTextHeight = y;
     gCtx.lineWidth = 2;
     gCtx.strokeStyle = 'black';
     gCtx.fillStyle = 'white';
@@ -38,31 +44,36 @@ function drawText(text, x, y) {
     gCtx.strokeText(text, x, y);
     gCtx;
 }
+
 function drawSelectedImg() {
     gCurrImgId = gMeme.selectedImgId - 1;
     drawImg(gCurrImgId);
 }
 
 function increaseFontSize() {
-    gMeme.lines[0].size++;
+    gMeme.lines[gCurrLine].size++;
     drawSelectedImg();
 }
 
 function decreaseFontSize() {
-    gMeme.lines[0].size--;
+    gMeme.lines[gCurrLine].size--;
     drawSelectedImg();
 }
 
 function fontPositionUp() {
-    gCurrTextHeight--;
+    gCurrUpTextHeight--;
     drawSelectedImg();
 }
 
 function fontPositionDown() {
-    gCurrTextHeight++;
+    gCurrUpTextHeight++;
     drawSelectedImg();
 }
 
 function switchLine() {
-    console.log('Here');
+    if (gCurrLine === 0) {
+        gCurrLine = 1;
+    } else if (gCurrLine === 1) {
+        gCurrLine = 0;
+    }
 }
