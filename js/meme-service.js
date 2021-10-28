@@ -28,7 +28,6 @@ function drawImg(idx) {
 }
 
 function drawText(text, x, y) {
-    console.log(y);
     var currTextSize = gMeme.lines[0].size;
     gCurrTextHeight = y;
     gCtx.lineWidth = 2;
@@ -56,12 +55,10 @@ function decreaseFontSize() {
 
 function fontPositionUp() {
     gCurrTextHeight--;
-    console.log(gCurrTextHeight);
     drawSelectedImg();
 }
 
 function fontPositionDown() {
     gCurrTextHeight++;
-    console.log(gCurrTextHeight);
     drawSelectedImg();
 }
