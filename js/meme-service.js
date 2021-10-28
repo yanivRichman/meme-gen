@@ -34,7 +34,8 @@ function renderTxt() {
 function onInputText(text) {
     gCurrText = text;
     gMeme.lines[0].txt = text;
-    drawImg(0);
+    gCurrImgId=gMeme.selectedImgId-1
+    drawImg(gCurrImgId);
 }
 
 function realTimeTextDraw(text) {
