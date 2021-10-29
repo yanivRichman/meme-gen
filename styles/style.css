@@ -86,7 +86,7 @@ a {
     background-color: #fefefe;
     color: #21ac91;
     cursor: not-allowed;
-    padding: px 20px;
+    padding: 5px 20px;
 }
 
 .main-nav .about {
@@ -209,19 +209,33 @@ a {
 }
 
 @media (max-width: 1100px) {
+    .my-canvas {
+        height: 250px;
+        width: 250px;
+    }
+    .right-side .my-input {
+        width: 280px;
+    }
+    .right-side .buttons-container {
+        width: 280px;
+    }
+    .main-content .card {
+        padding: 67px;
+        display: grid;
+        gap: 30px;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+    }
 
+}
+
+@media (max-width: 640px) {
     .editor-container {
         display: flex;
         flex-direction: column;
-        gap:20px;
+        gap: 20px;
+        padding-left: 50px;
     }
-    .right-side .my-input {
-        width: 400px;
-    }
-    .right-side .buttons-container {
-        width: 400px;
-    }
-
     .main-content .card {
         padding: 67px;
         display: grid;
@@ -229,5 +243,4 @@ a {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(9, 1fr);
     }
-
 }
