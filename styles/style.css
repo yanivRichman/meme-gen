@@ -86,6 +86,7 @@ a {
     background-color: #fefefe;
     color: #21ac91;
     cursor: not-allowed;
+    padding: 5px 20px;
 }
 
 .main-nav .about {

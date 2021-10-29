@@ -16,35 +16,38 @@
             </ul>
         </header>
         <main class="main-content main-layout space-between align-center">
-            <div class="editor-container flex ">
+            <div class="editor-container flex">
                 <div class="left-side">
                     <canvas id="my-canvas" height="400" width="400"></canvas>
                 </div>
                 <div class="right-side flex-raw">
                     <input
-                    class="my-input"
-                    type="text"
-                    id="myInput"
-                    oninput="onInputText(value)"
-                    placeholder="Type here..."
-                />
-                <div class="buttons-container flex space-between">
-                    <button class="button" onclick="onIncreaseFontSize()">
-                        A+
-                    </button>
-                    <button class="button" onclick="onDecreaseFontSize()">
-                        A-
-                    </button>
-                    <button class="button" onclick="onUpFontPosition()">
-                        ⬆
-                    </button>
-                    <button class="button" onclick="onDownFontPosition()">
-                        ⬇
-                    </button>
-                    <button class="button switch-line" onclick="onSwitchLine()">
-                        ⬆⬇
-                    </button>
-                </div>
+                        class="my-input"
+                        type="text"
+                        id="myInput"
+                        oninput="onInputText(value)"
+                        placeholder="Type here..."
+                    />
+                    <div class="buttons-container flex space-between">
+                        <button class="button" onclick="onIncreaseFontSize()">
+                            A+
+                        </button>
+                        <button class="button" onclick="onDecreaseFontSize()">
+                            A-
+                        </button>
+                        <button class="button" onclick="onUpFontPosition()">
+                            ⬆
+                        </button>
+                        <button class="button" onclick="onDownFontPosition()">
+                            ⬇
+                        </button>
+                        <button
+                            class="button switch-line"
+                            onclick="onSwitchLine()"
+                        >
+                            ⬆⬇
+                        </button>
+                    </div>
                 </div>
             </div>
             <div class="card">
@@ -60,22 +63,102 @@
                     class="card-image"
                     onclick="myPicChoise(2)"
                 />
-                <img src="img/3.jpg" alt="" class="card-image" />
-                <img src="img/4.jpg" alt="" class="card-image" />
-                <img src="img/5.jpg" alt="" class="card-image" />
-                <img src="img/6.jpg" alt="" class="card-image" />
-                <img src="img/7.jpg" alt="" class="card-image" />
-                <img src="img/8.jpg" alt="" class="card-image" />
-                <img src="img/9.jpg" alt="" class="card-image" />
-                <img src="img/10.jpg" alt="" class="card-image" />
-                <img src="img/11.jpg" alt="" class="card-image" />
-                <img src="img/12.jpg" alt="" class="card-image" />
-                <img src="img/13.jpg" alt="" class="card-image" />
-                <img src="img/14.jpg" alt="" class="card-image" />
-                <img src="img/15.jpg" alt="" class="card-image" />
-                <img src="img/16.jpg" alt="" class="card-image" />
-                <img src="img/17.jpg" alt="" class="card-image" />
-                <img src="img/18.jpg" alt="" class="card-image" />
+                <img
+                    src="img/3.jpg"
+                    alt=""
+                    class="card-image"
+                    onclick="myPicChoise(3)"
+                />
+                <img
+                    src="img/4.jpg"
+                    alt=""
+                    class="card-image"
+                    onclick="myPicChoise(4)"
+                />
+                <img
+                    src="img/5.jpg"
+                    alt=""
+                    class="card-image"
+                    onclick="myPicChoise(5)"
+                />
+                <img
+                    src="img/6.jpg"
+                    alt=""
+                    class="card-image"
+                    onclick="myPicChoise(6)"
+                />
+                <img
+                    src="img/7.jpg"
+                    alt=""
+                    class="card-image"
+                    onclick="myPicChoise(7)"
+                />
+                <img
+                    src="img/8.jpg"
+                    alt=""
+                    class="card-image"
+                    onclick="myPicChoise(8)"
+                />
+                <img
+                    src="img/9.jpg"
+                    alt=""
+                    class="card-image"
+                    onclick="myPicChoise(9)"
+                />
+                <img
+                    src="img/10.jpg"
+                    alt=""
+                    class="card-image"
+                    onclick="myPicChoise(10)"
+                />
+                <img
+                    src="img/11.jpg"
+                    alt=""
+                    class="card-image"
+                    onclick="myPicChoise(11)"
+                />
+                <img
+                    src="img/12.jpg"
+                    alt=""
+                    class="card-image"
+                    onclick="myPicChoise(12)"
+                />
+                <img
+                    src="img/13.jpg"
+                    alt=""
+                    class="card-image"
+                    onclick="myPicChoise(13)"
+                />
+                <img
+                    src="img/14.jpg"
+                    alt=""
+                    class="card-image"
+                    onclick="myPicChoise(14)"
+                />
+                <img
+                    src="img/15.jpg"
+                    alt=""
+                    class="card-image"
+                    onclick="myPicChoise(15)"
+                />
+                <img
+                    src="img/16.jpg"
+                    alt=""
+                    class="card-image"
+                    onclick="myPicChoise(16)"
+                />
+                <img
+                    src="img/17.jpg"
+                    alt=""
+                    class="card-image"
+                    onclick="myPicChoise(17)"
+                />
+                <img
+                    src="img/18.jpg"
+                    alt=""
+                    class="card-image"
+                    onclick="myPicChoise(18)"
+                />
             </div>
         </main>
         <script src="js/meme-service.js"></script>

@@ -67,14 +67,7 @@ function onSwitchLine() {
 }
 
 function myPicChoise(idx) {
-    var currImgId;
-    if (idx === 1) {
-        gMeme.selectedImgId = 1;
-    } else if (idx === 2) {
-        gMeme.selectedImgId = 2;
-    }
-    currImgId = gMeme.selectedImgId;
-    drawImg(currImgId - 1);
+    selectdIdx(idx);
 }
 
 function renderTxt() {
