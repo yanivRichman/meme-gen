@@ -86,7 +86,7 @@ a {
     background-color: #fefefe;
     color: #21ac91;
     cursor: not-allowed;
-    padding: 5px 20px;
+    padding: px 20px;
 }
 
 .main-nav .about {
@@ -128,16 +128,16 @@ a {
 }
 
 .button {
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     font-family: poppinsSB;
     font-size: 2rem;
     border-radius: 10px;
     cursor: pointer;
 }
 
-.switch-line{
+.switch-line {
     cursor: not-allowed;
-    background-color:yellow;
+    background-color: yellow;
     color: blue;
 }
 
@@ -153,6 +153,7 @@ a {
 
 .card-image {
     border-radius: 10px;
+    cursor: pointer;
 }
 
 /* HELPERS */
@@ -171,9 +172,19 @@ a {
     justify-content: space-between;
 }
 
-.flex-raw {
+.flex-column {
     display: flex;
     flex-direction: column;
+}
+
+.flex-column-reverse {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.flex-raw {
+    display: flex;
+    flex-direction: row;
 }
 
 /* list helpers */
@@ -195,4 +206,28 @@ a {
 
 .cursor-notAllowed {
     cursor: not-allowed;
+}
+
+@media (max-width: 1100px) {
+
+    .editor-container {
+        display: flex;
+        flex-direction: column;
+        gap:20px;
+    }
+    .right-side .my-input {
+        width: 400px;
+    }
+    .right-side .buttons-container {
+        width: 400px;
+    }
+
+    .main-content .card {
+        padding: 67px;
+        display: grid;
+        gap: 30px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(9, 1fr);
+    }
+
 }

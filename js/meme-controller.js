@@ -29,8 +29,8 @@
 // 4. Phase4 - Basic CSS:
 // a. Done --> Build the page layout with header (NavBar), footer and container for the center
 // b. Done --> Locate the two images at the center of the Image-Gallery page. Make sure both Images are the same width in CSS
-// c. Todo --> Give the Meme-Editor the right proportion between the space allocated for the canvas and the line-controls
-// d. Todo --> Implement a basic CSS for mobile (both gallery and Editor)
+// c. Done --> Give the Meme-Editor the right proportion between the space allocated for the canvas and the line-controls
+// d. Done --> Implement a basic CSS for mobile (both gallery and Editor)
 // e. Todo --> Implement that the Editor is hidden to start with and revealed when an image is clicked
 
 function onInit() {
@@ -62,7 +62,7 @@ function onDownFontPosition() {
 }
 
 function onSwitchLine() {
-    console.log('development')
+    console.log('development');
     // switchLine();
 }
 
@@ -72,12 +72,9 @@ function myPicChoise(idx) {
 
 function renderTxt() {
     var elUpTxt = document.getElementById('myInput');
-    var upTxt=elUpTxt.value;
-    var elDownTxt = document.getElementById('myInput');
-    var downTxt=elDownTxt.value;
-    if (gCurrLine === 0) {
-        drawText(upTxt, 100, gCurrUpTextHeight);
-    } else if (gCurrLine === 1) {
-        drawText(downTxt, 100, gCurrDownTextHeight);
-    }
+    var upTxt = elUpTxt.value;
+    // switchLine development
+    // var elDownTxt = document.getElementById('myInput');
+    // var downTxt = elDownTxt.value;
+    drawText(upTxt, 100, gCurrUpTextHeight);
 }
