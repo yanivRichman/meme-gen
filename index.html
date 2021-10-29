@@ -16,32 +16,35 @@
             </ul>
         </header>
         <main class="main-content main-layout space-between align-center">
-            <div class="editor-container flex">
+            <div class="editor-container flex ">
                 <div class="left-side">
-                    <canvas id="my-canvas" height="500" width="500"></canvas>
+                    <canvas id="my-canvas" height="400" width="400"></canvas>
                 </div>
-                <div class="right-side">
+                <div class="right-side flex-raw">
                     <input
+                    class="my-input"
                     type="text"
                     id="myInput"
                     oninput="onInputText(value)"
                     placeholder="Type here..."
                 />
-                <button class="cursor-pointer" onclick="onIncreaseFontSize()">
-                    A&#5161;
-                </button>
-                <button class="cursor-pointer" onclick="onDecreaseFontSize()">
-                    A&#8315;
-                </button>
-                <button class="cursor-pointer" onclick="onUpFontPosition()">
-                    ⬆
-                </button>
-                <button class="cursor-pointer" onclick="onDownFontPosition()">
-                    ⬇
-                </button>
-                <button class="cursor-notAllowed" onclick="onSwitchLine()">
-                    ⬆⬇
-                </button>
+                <div class="buttons-container flex space-between">
+                    <button class="button" onclick="onIncreaseFontSize()">
+                        A+
+                    </button>
+                    <button class="button" onclick="onDecreaseFontSize()">
+                        A-
+                    </button>
+                    <button class="button" onclick="onUpFontPosition()">
+                        ⬆
+                    </button>
+                    <button class="button" onclick="onDownFontPosition()">
+                        ⬇
+                    </button>
+                    <button class="button switch-line" onclick="onSwitchLine()">
+                        ⬆⬇
+                    </button>
+                </div>
                 </div>
             </div>
             <div class="card">

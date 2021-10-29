@@ -19,6 +19,11 @@
     src: url(/fonts/Poppins-Light.ttf);
 }
 
+@font-face {
+    font-family: poppinsSB;
+    src: url(/fonts/Poppins-SemiBold.ttf);
+}
+
 /* BASIC */
 
 html {
@@ -80,7 +85,6 @@ a {
     border-radius: 3em;
     background-color: #fefefe;
     color: #21ac91;
-    padding: 5px 20px;
     cursor: not-allowed;
 }
 
@@ -90,18 +94,53 @@ a {
 
 /* main content */
 
-
 .main-content {
     border-radius: 10px;
     background-image: linear-gradient(to right, #383b42, #383b42);
 }
 
+/* editor */
 
 .editor-container {
-    gap: 30px;
+    gap: 100px;
     padding-left: 120px;
     padding-top: 50px;
 }
+
+.right-side {
+    gap: 30px;
+}
+.right-side .my-input {
+    background-color: #ebeef3;
+    border-radius: 28px;
+    width: 450px;
+    padding: 10px;
+    font-family: poppinsM;
+    font-size: 1.57rem;
+    color: #3d3d3d;
+}
+
+.right-side .buttons-container {
+    background-color: #19a59f;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.button {
+    background-color: #FFFFFF;
+    font-family: poppinsSB;
+    font-size: 2rem;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.switch-line{
+    cursor: not-allowed;
+    background-color:yellow;
+    color: blue;
+}
+
+/* Gallery */
 
 .main-content .card {
     padding: 67px;
@@ -129,6 +168,11 @@ a {
 
 .flex.space-between {
     justify-content: space-between;
+}
+
+.flex-raw {
+    display: flex;
+    flex-direction: column;
 }
 
 /* list helpers */

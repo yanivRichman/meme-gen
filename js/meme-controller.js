@@ -26,6 +26,13 @@
 // a. Done --> Add the button “switch line”
 // b. Todo --> Add (to gMeme) a second line and implement switching between the lines (focus) using the button
 
+// 4. Phase4 - Basic CSS:
+// a. Done --> Build the page layout with header (NavBar), footer and container for the center
+// b. Done --> Locate the two images at the center of the Image-Gallery page. Make sure both Images are the same width in CSS
+// c. Todo --> Give the Meme-Editor the right proportion between the space allocated for the canvas and the line-controls
+// d. Todo --> Implement a basic CSS for mobile (both gallery and Editor)
+// e. Todo --> Implement that the Editor is hidden to start with and revealed when an image is clicked
+
 function onInit() {
     gElCanvas = document.getElementById('my-canvas');
     gCtx = gElCanvas.getContext('2d');
@@ -76,8 +83,8 @@ function renderTxt() {
     var elDownTxt = document.getElementById('myInput');
     var downTxt=elDownTxt.value;
     if (gCurrLine === 0) {
-        drawText(upTxt, 60, gCurrUpTextHeight);
+        drawText(upTxt, 100, gCurrUpTextHeight);
     } else if (gCurrLine === 1) {
-        drawText(downTxt, 60, gCurrDownTextHeight);
+        drawText(downTxt, 100, gCurrDownTextHeight);
     }
 }
