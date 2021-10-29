@@ -1,0 +1,153 @@
+* {
+    box-sizing: border-box;
+}
+
+/* TYPOGRAPHY */
+
+@font-face {
+    font-family: poppinsR;
+    src: url(/fonts/Poppins-Regular.ttf);
+}
+
+@font-face {
+    font-family: poppinsM;
+    src: url(/fonts/Poppins-Medium.ttf);
+}
+
+@font-face {
+    font-family: poppinsL;
+    src: url(/fonts/Poppins-Light.ttf);
+}
+
+/* BASIC */
+
+html {
+    font-family: poppinsM, sans-serif;
+    color: #ffffff;
+    line-height: 1.2;
+}
+
+body {
+    margin: 0;
+    font-size: 1.3125rem;
+    background-image: linear-gradient(to right, #f64f8b, #f88558);
+}
+
+img {
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+/* LAYOUT */
+
+.main-layout {
+    max-width: 1257px;
+    margin: 0 auto;
+}
+
+/* COMPONENTS */
+
+/* main header */
+
+.main-header {
+    height: 75px;
+    border-radius: 3em;
+    background-image: linear-gradient(to right, #0c98b9, #33be6d);
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.main-header .logo {
+    text-transform: uppercase;
+    margin-inline-start: 80px;
+}
+
+/* main nav */
+
+.main-nav > :last-child {
+    margin-inline-end: 246px;
+}
+
+.main-nav > *:not(:last-child) {
+    margin-inline-end: 65px;
+}
+
+.main-nav .gallery {
+    border-radius: 3em;
+    background-color: #fefefe;
+    color: #21ac91;
+    padding: 5px 20px;
+    cursor: not-allowed;
+}
+
+.main-nav .about {
+    cursor: not-allowed;
+}
+
+/* main content */
+
+
+.main-content {
+    border-radius: 10px;
+    background-image: linear-gradient(to right, #383b42, #383b42);
+}
+
+
+.editor-container {
+    gap: 30px;
+    padding-left: 120px;
+    padding-top: 50px;
+}
+
+.main-content .card {
+    padding: 67px;
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+}
+
+.card-image {
+    border-radius: 10px;
+}
+
+/* HELPERS */
+
+/* flex */
+
+.flex {
+    display: flex;
+}
+
+.flex.align-center {
+    align-items: center;
+}
+
+.flex.space-between {
+    justify-content: space-between;
+}
+
+/* list helpers */
+
+.clean-list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.cursor-notAllowed {
+    cursor: not-allowed;
+}
