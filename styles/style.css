@@ -5,18 +5,8 @@
 /* TYPOGRAPHY */
 
 @font-face {
-    font-family: poppinsR;
-    src: url(../fonts/Poppins-Regular.ttf);
-}
-
-@font-face {
     font-family: poppinsM;
     src: url(../fonts/Poppins-Medium.ttf);
-}
-
-@font-face {
-    font-family: poppinsL;
-    src: url(../fonts/Poppins-Light.ttf);
 }
 
 @font-face {
@@ -30,7 +20,7 @@
 }
 
 @font-face {
-    font-family:aquire;
+    font-family: aquire;
     src: url(../fonts/AquireBold-8Ma60.otf);
 }
 
@@ -243,13 +233,13 @@ a {
         margin-inline-start: 20px;
         font-size: 1.5rem;
     }
-    body{
+    body {
         font-size: 1rem;
     }
     .main-nav > :last-child {
         margin-inline-end: 300px;
     }
-    
+
     .main-nav > *:not(:last-child) {
         margin-inline-end: 15px;
     }
@@ -273,9 +263,9 @@ a {
         padding: 5px;
     }
     .flex.space-between {
-        justify-content:left;
+        justify-content: left;
     }
-    .button{
+    .button {
         font-size: 1rem;
     }
     .main-nav > :last-child {

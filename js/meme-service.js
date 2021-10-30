@@ -57,6 +57,12 @@ function selectdIdx(idx) {
     drawImg(currImgId - 1);
 }
 
+function updateGmeme(text, idx) {
+    gCurrText = text;
+    gCurrLine = idx;
+    gMeme.lines[gCurrLine].txt = text;
+}
+
 function drawImg(idx) {
     console.log(gMeme);
     var img = new Image();
@@ -83,8 +89,8 @@ function drawText(text1, x1, y1) {
 
 function changeFontColor(color) {
     gCtx.beginPath();
-    console.log(color);
     gColor = color;
+    gMeme.lines[gCurrLine].color = gColor;
     renderTxt();
 }
 
@@ -139,6 +145,8 @@ function fontPositionLeft() {
     drawSelectedImg();
 }
 
+
+// -----------------------development switchLine-------------------------
 // function switchLine() {
 //     if (gCurrLine === 0) {
 //         gCurrLine = 1;
