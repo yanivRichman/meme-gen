@@ -148,10 +148,10 @@ a {
     cursor: pointer;
 }
 
-.switch-line {
+.line {
     cursor: not-allowed;
-    background-color: yellow;
-    color: blue;
+    background-color: lightgreen;
+    color: white;
 }
 
 /* Gallery */

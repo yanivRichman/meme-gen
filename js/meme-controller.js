@@ -46,6 +46,10 @@ function onInputText(text, idx) {
     drawSelectedImg();
 }
 
+function onInputColor(color) {
+    changeFontColor(color);
+}
+
 function onIncreaseFontSize() {
     increaseFontSize();
 }

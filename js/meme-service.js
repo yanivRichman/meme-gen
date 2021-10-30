@@ -43,6 +43,7 @@ var gXUpperRect = 90;
 var gYUpperRect = 13;
 var gXLowerRect = 250;
 var gYLowerRect = 50;
+var gColor = 'white';
 
 function selectdIdx(idx) {
     var currImgId;
@@ -70,17 +71,21 @@ function drawImg(idx) {
 
 function drawText(text1, x1, y1) {
     var currTopTextSize = gMeme.lines[0].size;
-    console.log('currTopTextSize', currTopTextSize);
     gCurrTopTextHeight = y1;
     gCtx.lineWidth = 2;
     gCtx.strokeStyle = 'black';
-    gCtx.fillStyle = 'white';
-    console.log(gCtx);
+    gCtx.fillStyle = gColor;
     gCtx.font = currTopTextSize + 'px impact';
     gCtx.setLineDash([]);
     gCtx.fillText(text1, x1, y1);
     gCtx.strokeText(text1, x1, y1);
-    gCtx;
+}
+
+function changeFontColor(color) {
+    gCtx.beginPath();
+    console.log(color);
+    gColor = color;
+    renderTxt();
 }
 
 function drawRect() {

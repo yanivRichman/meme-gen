@@ -34,15 +34,21 @@
                         placeholder="Type here..."
                     />
                     <div class="buttons-container flex space-between">
+                        <input class="button" type="color" id="favcolor" name="favcolor" value="#ff0000" oninput="onInputColor(value)" ><br><br>
                         <button class="button" onclick="onIncreaseFontSize()">
                             A+
                         </button>
                         <button class="button" onclick="onDecreaseFontSize()">
                             A-
                         </button>
-
                         <button
-                            class="button switch-line"
+                        class="button line"
+                        onclick="onSwitchLine()"
+                    >
+                        +
+                    </button>
+                        <button
+                            class="button line"
                             onclick="onSwitchLine()"
                         >
                             ⬆⬇
