@@ -6,22 +6,22 @@
 
 @font-face {
     font-family: poppinsR;
-    src: url(/fonts/Poppins-Regular.ttf);
+    src: url(../fonts/Poppins-Regular.ttf);
 }
 
 @font-face {
     font-family: poppinsM;
-    src: url(/fonts/Poppins-Medium.ttf);
+    src: url(../fonts/Poppins-Medium.ttf);
 }
 
 @font-face {
     font-family: poppinsL;
-    src: url(/fonts/Poppins-Light.ttf);
+    src: url(../fonts/Poppins-Light.ttf);
 }
 
 @font-face {
     font-family: poppinsSB;
-    src: url(/fonts/Poppins-SemiBold.ttf);
+    src: url(../fonts/Poppins-SemiBold.ttf);
 }
 
 /* BASIC */
