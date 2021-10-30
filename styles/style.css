@@ -251,6 +251,9 @@ a {
         padding: 5px;
     }
     .flex.space-between {
-        justify-content:left
+        justify-content:left;
+    }
+    .button{
+        font-size: 1rem;
     }
 }
