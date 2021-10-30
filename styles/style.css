@@ -29,6 +29,11 @@
     src: url(../fonts/Poppins-ExtraBold.ttf);
 }
 
+@font-face {
+    font-family:aquire;
+    src: url(../fonts/AquireBold-8Ma60.otf);
+}
+
 /* BASIC */
 
 html {
@@ -74,6 +79,9 @@ a {
 .main-header .logo {
     text-transform: uppercase;
     margin-inline-start: 80px;
+    font-family: aquire;
+    font-size: 2rem;
+    color: black;
 }
 
 /* main nav */
@@ -231,6 +239,20 @@ a {
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: repeat(5, 1fr);
     }
+    .main-header .logo {
+        margin-inline-start: 20px;
+        font-size: 1.5rem;
+    }
+    body{
+        font-size: 1rem;
+    }
+    .main-nav > :last-child {
+        margin-inline-end: 300px;
+    }
+    
+    .main-nav > *:not(:last-child) {
+        margin-inline-end: 15px;
+    }
 }
 
 @media (max-width: 640px) {
@@ -255,5 +277,14 @@ a {
     }
     .button{
         font-size: 1rem;
+    }
+    .main-nav > :last-child {
+        margin-inline-end: 5px;
+    }
+    .main-nav > *:not(:last-child) {
+        margin-inline-end: 5px;
+    }
+    .main-header .logo {
+        margin-inline-end: 10px;
     }
 }
