@@ -27,7 +27,7 @@
 /* BASIC */
 
 html {
-    font-family: poppinsM, sans-serif;
+    /* font-family: poppinsM, sans-serif; */
     color: #ffffff;
     line-height: 1.2;
 }
@@ -59,6 +59,7 @@ a {
 /* main header */
 
 .main-header {
+    font-family: poppinsM, sans-serif;
     height: 75px;
     border-radius: 3em;
     background-image: linear-gradient(to right, #0c98b9, #33be6d);
@@ -226,7 +227,6 @@ a {
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: repeat(5, 1fr);
     }
-
 }
 
 @media (max-width: 640px) {
