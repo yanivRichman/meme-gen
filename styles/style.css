@@ -24,10 +24,14 @@
     src: url(../fonts/Poppins-SemiBold.ttf);
 }
 
+@font-face {
+    font-family: poppinsEB;
+    src: url(../fonts/Poppins-ExtraBold.ttf);
+}
+
 /* BASIC */
 
 html {
-    /* font-family: poppinsM, sans-serif; */
     color: #ffffff;
     line-height: 1.2;
 }
@@ -117,7 +121,7 @@ a {
     border-radius: 28px;
     width: 450px;
     padding: 10px;
-    font-family: poppinsM;
+    font-family: poppinsEB;
     font-size: 1.57rem;
     color: #3d3d3d;
 }
