@@ -247,4 +247,10 @@ a {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(9, 1fr);
     }
+    .right-side .buttons-container {
+        padding: 5px;
+    }
+    .flex.space-between {
+        justify-content:left
+    }
 }
