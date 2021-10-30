@@ -18,14 +18,14 @@
         <main class="main-content main-layout align-center">
             <div class="editor-container flex">
                 <div class="left-side">
-                    <canvas class="my-canvas" id="my-canvas" height="400px" width="400px"></canvas>
+                    <canvas class="my-canvas" id="my-canvas" height="400px" width="400px" ></canvas>
                 </div>
                 <div class="right-side flex-column">
                     <input
                         class="my-input"
                         type="text"
-                        id="myInput"
-                        oninput="onInputText(value)"
+                        id="myTopInput"
+                        oninput="onInputText(value,0)"
                         placeholder="Type here..."
                     />
                     <div class="buttons-container flex space-between">
@@ -35,17 +35,26 @@
                         <button class="button" onclick="onDecreaseFontSize()">
                             A-
                         </button>
+
+                        <button
+                            class="button switch-line"
+                            onclick="onSwitchLine()"
+                        >
+                            ⬆⬇
+                        </button>
+                    </div>
+                    <div class="buttons-container flex space-between">
                         <button class="button" onclick="onUpFontPosition()">
                             ⬆
                         </button>
                         <button class="button" onclick="onDownFontPosition()">
                             ⬇
                         </button>
-                        <button
-                            class="button switch-line"
-                            onclick="onSwitchLine()"
-                        >
-                            ⬆⬇
+                        <button class="button" onclick="onRightFontPosition()">
+                            ➡
+                        </button>
+                        <button class="button" onclick="onLeftFontPosition()">
+                            ⬅
                         </button>
                     </div>
                 </div>

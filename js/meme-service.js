@@ -36,9 +36,13 @@ var gElCanvas;
 var gCtx;
 var gCurrText;
 var gCurrImgId;
-var gCurrUpTextHeight = 50;
-var gCurrDownTextHeight = 250;
+var gCurrTopTextHeight = 50;
+var gCurrTopTextWidth = 100;
 var gCurrLine = 0;
+var gXUpperRect = 90;
+var gYUpperRect = 13;
+var gXLowerRect = 250;
+var gYLowerRect = 50;
 
 function selectdIdx(idx) {
     var currImgId;
@@ -59,20 +63,32 @@ function drawImg(idx) {
     img.src = currImg;
     img.onload = () => {
         gCtx.drawImage(img, 0, 0, gElCanvas.width, gElCanvas.height);
+        drawRect();
         renderTxt();
     };
 }
 
-function drawText(text, x, y) {
-    var currTextSize = gMeme.lines[gCurrLine].size;
-    gCurrUpTextHeight = y;
+function drawText(text1, x1, y1) {
+    var currTopTextSize = gMeme.lines[0].size;
+    console.log('currTopTextSize', currTopTextSize);
+    gCurrTopTextHeight = y1;
     gCtx.lineWidth = 2;
     gCtx.strokeStyle = 'black';
     gCtx.fillStyle = 'white';
-    gCtx.font = currTextSize + 'px impact';
-    gCtx.fillText(text, x, y);
-    gCtx.strokeText(text, x, y);
+    console.log(gCtx);
+    gCtx.font = currTopTextSize + 'px impact';
+    gCtx.setLineDash([]);
+    gCtx.fillText(text1, x1, y1);
+    gCtx.strokeText(text1, x1, y1);
     gCtx;
+}
+
+function drawRect() {
+    gCtx.beginPath();
+    gCtx.rect(gXUpperRect, gYUpperRect, gXLowerRect, gYLowerRect);
+    gCtx.setLineDash([5, 10]);
+    gCtx.strokeStyle = 'black';
+    gCtx.stroke();
 }
 
 function drawSelectedImg() {
@@ -82,28 +98,46 @@ function drawSelectedImg() {
 
 function increaseFontSize() {
     gMeme.lines[gCurrLine].size++;
+    gYUpperRect--;
+    gYLowerRect++;
     drawSelectedImg();
 }
 
 function decreaseFontSize() {
     gMeme.lines[gCurrLine].size--;
+    gYUpperRect++;
+    gYLowerRect--;
     drawSelectedImg();
 }
 
 function fontPositionUp() {
-    gCurrUpTextHeight--;
+    gCurrTopTextHeight--;
+    gYUpperRect--;
     drawSelectedImg();
 }
 
 function fontPositionDown() {
-    gCurrUpTextHeight++;
+    gCurrTopTextHeight++;
+    gYUpperRect++;
     drawSelectedImg();
 }
 
-function switchLine() {
-    if (gCurrLine === 0) {
-        gCurrLine = 1;
-    } else if (gCurrLine === 1) {
-        gCurrLine = 0;
-    }
+function fontPositionRight() {
+    gCurrTopTextWidth++;
+    gXUpperRect++;
+    drawSelectedImg();
 }
+
+function fontPositionLeft() {
+    gCurrTopTextWidth--;
+    gXUpperRect--;
+    drawSelectedImg();
+}
+
+// function switchLine() {
+//     if (gCurrLine === 0) {
+//         gCurrLine = 1;
+//     } else if (gCurrLine === 1) {
+//         gCurrLine = 0;
+//     }
+// }

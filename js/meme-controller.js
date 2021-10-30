@@ -39,8 +39,9 @@ function onInit() {
     drawImg(0);
 }
 
-function onInputText(text) {
+function onInputText(text, idx) {
     gCurrText = text;
+    gCurrLine = idx;
     gMeme.lines[gCurrLine].txt = text;
     drawSelectedImg();
 }
@@ -61,6 +62,14 @@ function onDownFontPosition() {
     fontPositionDown();
 }
 
+function onRightFontPosition() {
+    fontPositionRight();
+}
+
+function onLeftFontPosition() {
+    fontPositionLeft();
+}
+
 function onSwitchLine() {
     console.log('development');
     // switchLine();
@@ -71,10 +80,7 @@ function myPicChoise(idx) {
 }
 
 function renderTxt() {
-    var elUpTxt = document.getElementById('myInput');
-    var upTxt = elUpTxt.value;
-    // switchLine development
-    // var elDownTxt = document.getElementById('myInput');
-    // var downTxt = elDownTxt.value;
-    drawText(upTxt, 100, gCurrUpTextHeight);
+    var elTopTxt = document.getElementById('myTopInput');
+    var topTxt = elTopTxt.value;
+    drawText(topTxt, gCurrTopTextWidth, gCurrTopTextHeight);
 }
