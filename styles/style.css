@@ -129,7 +129,8 @@ a {
 .top-btn-raw {
     align-items: center;
     margin: 0 auto;
-    gap: 10px;
+    gap: 26px;
+    margin-top: 20px;
 }
 
 .switch-line-btn {
@@ -169,7 +170,7 @@ a {
 .right-side .buttons-container {
     background-color: #19a59f;
     border-radius: 5px;
-    padding: 20px;
+    padding: 16px;
 }
 
 .up-down {
@@ -333,6 +334,5 @@ a {
     .top-btn-raw {
         margin-left: 10px;
         width: 250px;
-
     }
 }
