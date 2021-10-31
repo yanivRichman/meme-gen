@@ -160,6 +160,12 @@ a {
     padding: 4px 5px 0px 5px;
 }
 
+.download-btn{
+    background-image: linear-gradient(to right, #383b42, #383b42);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
 .right-side .buttons-container {
     background-color: #19a59f;
     border-radius: 5px;
