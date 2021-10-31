@@ -114,7 +114,7 @@ a {
 }
 
 .right-side {
-    gap: 30px;
+    gap: 20px;
 }
 .right-side .my-input {
     background-color: #ebeef3;
@@ -160,7 +160,7 @@ a {
     padding: 4px 5px 0px 5px;
 }
 
-.download-btn{
+.download-btn {
     background-image: linear-gradient(to right, #383b42, #383b42);
     border-radius: 10px;
     cursor: pointer;
@@ -271,6 +271,10 @@ a {
     .right-side .buttons-container {
         width: 280px;
     }
+    .top-btn-raw {
+        gap: 0px;
+        width: 250px;
+    }
     .main-content .card {
         padding: 67px;
         display: grid;
@@ -326,7 +330,9 @@ a {
     .main-header .logo {
         margin-inline-end: 10px;
     }
-    .top-btn-raw{
-        margin-left: 50px;
+    .top-btn-raw {
+        margin-left: 10px;
+        width: 250px;
+
     }
 }

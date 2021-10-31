@@ -55,7 +55,6 @@ function onDeleteLine() {
 }
 function downloadCanvas(elLink) {
     const data = gElCanvas.toDataURL();
-    console.log(elLink);
     elLink.href = data;
     elLink.download = 'my-meme';
 }

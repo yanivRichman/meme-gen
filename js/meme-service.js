@@ -66,7 +66,7 @@ function updateGmeme(text, idx) {
 function startingPointData() {
     gCtx.textAlign = 'center';
     gMeme.lines[0].txt = '';
-    gMeme.lines[0].size = '30';
+    gMeme.lines[0].size = 30;
     gMeme.lines[0].align = 'center';
     gMeme.lines[0].color = 'white';
     gCurrTopTextHeight = 50;
