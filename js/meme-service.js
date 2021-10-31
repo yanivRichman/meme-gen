@@ -27,8 +27,8 @@ var gMeme = {
     selectedImgId: 1,
     selectedLineIdx: 0,
     lines: [
-        { txt: '', size: 30, align: 'left', color: 'white' },
-        { txt: '', size: 30, align: 'left', color: 'white' },
+        { txt: '', size: 30, align: 'center', color: 'white' },
+        { txt: '', size: 30, align: 'center', color: 'white' },
     ],
 };
 
@@ -37,11 +37,11 @@ var gCtx;
 var gCurrText;
 var gCurrImgId;
 var gCurrTopTextHeight = 50;
-var gCurrTopTextWidth = 100;
+var gCurrTopTextWidth = 200;
 var gCurrLine = 0;
-var gXUpperRect = 90;
+var gXUpperRect = 0;
 var gYUpperRect = 13;
-var gXLowerRect = 250;
+var gXLowerRect = 400;
 var gYLowerRect = 50;
 var gColor = 'white';
 
@@ -61,6 +61,22 @@ function updateGmeme(text, idx) {
     gCurrText = text;
     gCurrLine = idx;
     gMeme.lines[gCurrLine].txt = text;
+}
+
+function startingPointData() {
+    gCtx.textAlign = 'center';
+    gMeme.lines[0].txt = '';
+    gMeme.lines[0].size = '30';
+    gMeme.lines[0].align = 'center';
+    gMeme.lines[0].color = 'white';
+    gCurrTopTextHeight = 50;
+    gCurrTopTextWidth = 200;
+    gCurrLine = 0;
+    gXUpperRect = 0;
+    gYUpperRect = 13;
+    gXLowerRect = 400;
+    gYLowerRect = 50;
+    gColor = 'white';
 }
 
 function drawImg(idx) {
@@ -87,6 +103,13 @@ function drawText(text1, x1, y1) {
     gCtx.strokeText(text1, x1, y1);
 }
 
+function deleteLine() {
+    console.log('here');
+    gMeme.lines[gCurrLine].txt = '';
+    clearTxt();
+    onInit();
+}
+
 function changeFontColor(color) {
     gCtx.beginPath();
     gColor = color;
@@ -104,6 +127,8 @@ function drawRect() {
 
 function drawSelectedImg() {
     gCurrImgId = gMeme.selectedImgId - 1;
+    console.log('gCurrImgId', gCurrImgId);
+    console.log('gMeme.selectedImgId', gMeme.selectedImgId);
     drawImg(gCurrImgId);
 }
 
@@ -118,6 +143,27 @@ function decreaseFontSize() {
     gMeme.lines[gCurrLine].size--;
     gYUpperRect++;
     gYLowerRect--;
+    drawSelectedImg();
+}
+
+function makeLeftAlign() {
+    gCurrTopTextWidth = 5;
+    gMeme.lines[gCurrLine].align = 'left';
+    gCtx.textAlign = 'start';
+    drawSelectedImg();
+}
+
+function makeCenterAlign() {
+    gCurrTopTextWidth = gElCanvas.width / 2;
+    gMeme.lines[gCurrLine].align = 'center';
+    gCtx.textAlign = 'center';
+    drawSelectedImg();
+}
+
+function makeRightAlign() {
+    gCurrTopTextWidth = 395;
+    gMeme.lines[gCurrLine].align = 'right';
+    gCtx.textAlign = 'end';
     drawSelectedImg();
 }
 
@@ -144,7 +190,6 @@ function fontPositionLeft() {
     gXUpperRect--;
     drawSelectedImg();
 }
-
 
 // -----------------------development switchLine-------------------------
 // function switchLine() {

@@ -33,33 +33,56 @@
                         oninput="onInputText(value,0)"
                         placeholder="Type here..."
                     />
+                    <div class="flex top-btn-raw">
+                        <button
+                            class="switch-line-btn"
+                            onclick="onSwitchLine()"
+                        >
+                            ⬆⬇
+                        </button>
+                        <button class="add-line-btn" onclick="onSwitchLine()">
+                            +
+                        </button>
+                        <button class="delete-line-btn" onclick="onDeleteLine()">
+                            <img src="img/‏‏delete3.PNG" />
+                        </button>
+                    </div>
                     <div class="buttons-container flex space-between">
-                        <input
-                            class="button"
-                            type="color"
-                            id="favcolor"
-                            name="favcolor"
-                            value="#ff0000"
-                            oninput="onInputColor(value)"
-                        /><br /><br />
                         <button class="button" onclick="onIncreaseFontSize()">
                             A+
                         </button>
                         <button class="button" onclick="onDecreaseFontSize()">
                             A-
                         </button>
-                        <button class="button line" onclick="onSwitchLine()">
-                            +
+                        <button class="button" onclick="onLeftAlign()">
+                            <img src="img/align-left.png" />
                         </button>
-                        <button class="button line" onclick="onSwitchLine()">
-                            ⬆⬇
+                        <button class="button" onclick="onCenterAlign()">
+                            <img src="img/align-center.png" />
+                        </button>
+                        <button class="button" onclick="onRightAlign()">
+                            <img src="img/align-right.png" />
                         </button>
                     </div>
                     <div class="buttons-container flex space-between">
-                        <button class="button" onclick="onUpFontPosition()">
+                        <input
+                            class="button color"
+                            type="color"
+                            id="favcolor"
+                            name="favcolor"
+                            value="#ff0000"
+                            oninput="onInputColor(value)"
+                        />
+                        <button
+                            class="button up-down"
+                            onclick="onUpFontPosition()"
+                        >
                             ⬆
                         </button>
-                        <button class="button" onclick="onDownFontPosition()">
+                        <button
+                            class="button up-down"
+                            onclick="onDownFontPosition()"
+                        >
                             ⬇
                         </button>
                         <button class="button" onclick="onRightFontPosition()">

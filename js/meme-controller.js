@@ -34,16 +34,24 @@
 // e. No need --> Implement that the Editor is hidden to start with and revealed when an image is clicked
 
 var gElCanvas;
+var gCurrImgId = 0;
 
 function onInit() {
     gElCanvas = document.getElementById('my-canvas');
     gCtx = gElCanvas.getContext('2d');
-    drawImg(0);
+    drawImg(gCurrImgId);
+    startingPointData();
+    var elColor = document.getElementById('favcolor');
+    elColor.value = '#ff0000';
 }
 
 function onInputText(text, idx) {
     updateGmeme(text, idx);
     drawSelectedImg();
+}
+
+function onDeleteLine() {
+    deleteLine();
 }
 
 function onInputColor(color) {
@@ -56,6 +64,17 @@ function onIncreaseFontSize() {
 
 function onDecreaseFontSize() {
     decreaseFontSize();
+}
+
+function onLeftAlign() {
+    makeLeftAlign();
+}
+
+function onCenterAlign() {
+    makeCenterAlign();
+}
+function onRightAlign() {
+    makeRightAlign();
 }
 
 function onUpFontPosition() {
@@ -82,6 +101,11 @@ function onSwitchLine() {
 
 function myPicChoise(idx) {
     selectdIdx(idx);
+}
+
+function clearTxt() {
+    var elTopTxt = document.getElementById('myTopInput');
+    elTopTxt.value = '';
 }
 
 function renderTxt() {

@@ -35,6 +35,7 @@ body {
     margin: 0;
     font-size: 1.3125rem;
     background-image: linear-gradient(to right, #f64f8b, #f88558);
+    margin: 0 auto;
 }
 
 img {
@@ -106,6 +107,7 @@ a {
 /* editor */
 
 .editor-container {
+    display: none;
     gap: 100px;
     padding-left: 120px;
     padding-top: 50px;
@@ -124,10 +126,52 @@ a {
     color: #3d3d3d;
 }
 
+.top-btn-raw {
+    align-items: center;
+    margin: 0 auto;
+    gap: 10px;
+}
+
+.switch-line-btn {
+    background-color: rgb(59, 182, 223);
+    color: white;
+    cursor: not-allowed;
+    font-family: poppinsSB;
+    font-size: 2rem;
+    border-radius: 10px;
+}
+
+.add-line-btn {
+    background-color: lightgreen;
+    color: white;
+    cursor: not-allowed;
+    font-family: poppinsSB;
+    font-size: 2rem;
+    border-radius: 10px;
+    padding: 1px 12px;
+}
+
+.delete-line-btn {
+    background-color: rgb(236, 43, 43);
+    cursor: pointer;
+    font-family: poppinsSB;
+    font-size: 2rem;
+    border-radius: 10px;
+    padding: 4px 5px 0px 5px;
+}
+
 .right-side .buttons-container {
     background-color: #19a59f;
     border-radius: 5px;
     padding: 20px;
+}
+
+.up-down {
+    padding: 0px 15px;
+}
+
+.color {
+    align-self: center;
 }
 
 .button {
@@ -166,8 +210,7 @@ a {
 .flex {
     display: flex;
 }
-
-.flex.align-center {
+.align-center {
     align-items: center;
 }
 
@@ -213,8 +256,8 @@ a {
 
 @media (max-width: 1100px) {
     .my-canvas {
-        height: 250px;
-        width: 250px;
+        height: 300px;
+        width: 300px;
     }
     .right-side .my-input {
         width: 280px;
@@ -276,5 +319,8 @@ a {
     }
     .main-header .logo {
         margin-inline-end: 10px;
+    }
+    .top-btn-raw{
+        margin-left: 50px;
     }
 }
