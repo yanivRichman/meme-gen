@@ -330,26 +330,15 @@ margin-top: 10px;
         grid-template-rows: repeat(9, 1fr);
     }
     .right-side {
-        /* background-color: #33be6d; */
         margin-left: 10px;
     }
-
-    .right-side .buttons-container {
-        padding: 10px;
-        /* gap: 20px; */
-    }
-    .flex.space-between {
+   .flex.space-between {
         justify-content: left;
     }
-    /* .button {
-        font-size: .5rem;
-    } */
-
     .right-side .my-input {
         height: 40px;
         width: 280px;
     }
-
     .main-nav > :last-child {
         margin-inline-end: 5px;
     }
