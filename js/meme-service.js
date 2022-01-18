@@ -86,7 +86,7 @@ function startingPointData() {
 function drawImg(idx) {
     console.log(gMeme);
     var img = new Image();
-    var currImg = gImgs[idx].url;
+    var currImg = gImgs[idx+1].url;
     img.src = currImg;
     img.onload = () => {
         gCtx.drawImage(img, 0, 0, gElCanvas.width, gElCanvas.height);
