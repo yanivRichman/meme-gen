@@ -46,6 +46,7 @@ function onInit() {
 }
 
 function onInputText(text, idx) {
+    window.scrollTo(0,0);
     updateGmeme(text, idx);
     drawSelectedImg();
 }
