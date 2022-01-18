@@ -3,7 +3,7 @@
 var gKeywords = { happy: 12, 'funny puk': 1 };
 
 var gImgs = [
-    { id: 1, url: 'img/1.JPG', keywords: [''] },
+    { id: 1, url: 'img/1.jpg', keywords: [''] },
     { id: 2, url: 'img/2.jpg', keywords: [''] },
     { id: 3, url: 'img/3.jpg', keywords: [''] },
     { id: 4, url: 'img/4.jpg', keywords: [''] },
