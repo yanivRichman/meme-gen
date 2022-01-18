@@ -3,7 +3,7 @@
 var gKeywords = { happy: 12, 'funny puk': 1 };
 
 var gImgs = [
-    { id: 1, url: 'img/19.JPG', keywords: [''] },
+    { id: 1, url: 'img/1.JPG', keywords: [''] },
     { id: 2, url: 'img/20.jpg', keywords: [''] },
     { id: 3, url: 'img/21.jpg', keywords: [''] },
     { id: 4, url: 'img/22.jpg', keywords: [''] },
@@ -86,7 +86,7 @@ function startingPointData() {
 function drawImg(idx) {
     console.log(gMeme);
     var img = new Image();
-    var currImg = gImgs[idx+1].url;
+    var currImg = gImgs[idx].url;
     img.src = currImg;
     img.onload = () => {
         gCtx.drawImage(img, 0, 0, gElCanvas.width, gElCanvas.height);
