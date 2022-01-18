@@ -27,8 +27,8 @@ var gMeme = {
     selectedImgId: 1,
     selectedLineIdx: 0,
     lines: [
-        { txt: '', size: 30, align: 'center', color: 'white' },
-        { txt: '', size: 30, align: 'center', color: 'white' },
+        { txt: '', size: 30, align: 'center', color: 'red' },
+        { txt: '', size: 30, align: 'center', color: 'red' },
     ],
 };
 
@@ -43,7 +43,7 @@ var gXUpperRect = 0;
 var gYUpperRect = 13;
 var gXLowerRect = 400;
 var gYLowerRect = 50;
-var gColor = 'white';
+var gColor = 'red';
 
 function selectdIdx(idx) {
     var currImgId;
@@ -68,7 +68,7 @@ function startingPointData() {
     gMeme.lines[0].txt = '';
     gMeme.lines[0].size = 30;
     gMeme.lines[0].align = 'center';
-    gMeme.lines[0].color = 'white';
+    gMeme.lines[0].color = 'red';
     gCurrTopTextHeight = 50;
     gCurrTopTextWidth = 200;
     gCurrLine = 0;
@@ -76,7 +76,7 @@ function startingPointData() {
     gYUpperRect = 13;
     gXLowerRect = 400;
     gYLowerRect = 50;
-    gColor = 'white';
+    gColor = 'red';
 }
 
 function drawImg(idx) {
@@ -86,7 +86,7 @@ function drawImg(idx) {
     img.src = currImg;
     img.onload = () => {
         gCtx.drawImage(img, 0, 0, gElCanvas.width, gElCanvas.height);
-        drawRect();
+        // drawRect();
         renderTxt();
     };
 }
@@ -117,13 +117,13 @@ function changeFontColor(color) {
     renderTxt();
 }
 
-function drawRect() {
-    gCtx.beginPath();
-    gCtx.rect(gXUpperRect, gYUpperRect, gXLowerRect, gYLowerRect);
-    gCtx.setLineDash([5, 10]);
-    gCtx.strokeStyle = 'black';
-    gCtx.stroke();
-}
+// function drawRect() {
+//     gCtx.beginPath();
+//     gCtx.rect(gXUpperRect, gYUpperRect, gXLowerRect, gYLowerRect);
+//     gCtx.setLineDash([5, 10]);
+//     gCtx.strokeStyle = 'black';
+//     gCtx.stroke();
+// }
 
 function drawSelectedImg() {
     gCurrImgId = gMeme.selectedImgId - 1;

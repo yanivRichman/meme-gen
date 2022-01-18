@@ -105,6 +105,8 @@ function onSwitchLine() {
 }
 
 function myPicChoise(idx) {
+    window.scrollTo(0,0);
+    onDeleteLine();
     selectdIdx(idx);
 }
 
