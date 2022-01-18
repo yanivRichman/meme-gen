@@ -24,7 +24,7 @@
 
 // 3. Phase3 – switch between two lines:
 // a. Done --> Add the button “switch line”
-// b. Not Done --> Add (to gMeme) a second line and implement switching between the lines (focus) using the button
+// b. In progress --> Add (to gMeme) a second line and implement switching between the lines (focus) using the button
 
 // 4. Phase4 - Basic CSS:
 // a. Done --> Build the page layout with header (NavBar), footer and container for the center
